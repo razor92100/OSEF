@@ -1,0 +1,30 @@
+osef_app:
+    path:     /
+    defaults: { _controller: "OSEFAppBundle:Comment:index" }
+
+osef_app_show:
+    path:     /{id}/show
+    defaults: { _controller: "OSEFAppBundle:Comment:show" }
+
+osef_app_new:
+    path:     /new
+    defaults: { _controller: "OSEFAppBundle:Comment:new" }
+
+osef_app_create:
+    path:     /create
+    defaults: { _controller: "OSEFAppBundle:Comment:create" }
+    requirements: { _method: post }
+
+osef_app_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "OSEFAppBundle:Comment:edit" }
+
+osef_app_update:
+    path:     /{id}/update
+    defaults: { _controller: "OSEFAppBundle:Comment:update" }
+    requirements: { _method: post|put }
+
+osef_app_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "OSEFAppBundle:Comment:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,11 @@
+osef_app_article:
+    resource: "@OSEFAppBundle/Resources/config/routing/article.yml"
+    prefix:   /article
+
+osef_app_comment:
+    resource: "@OSEFAppBundle/Resources/config/routing/comment.yml"
+    prefix:   /comment
+
+osef_app_homepage:
+    path:     /
+    defaults: { _controller: OSEFAppBundle:Default:index }

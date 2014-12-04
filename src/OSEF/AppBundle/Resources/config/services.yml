@@ -1,0 +1,21 @@
+parameters:
+    osef_app.article.entity.class:    OSEF\AppBundle\Entity\Article
+    osef_app.article.manager.class:   OSEF\AppBundle\Manager\ArticleManager
+    osef_app.comment.entity.class:    OSEF\AppBundle\Entity\Comment
+    osef_app.comment.manager.class:   OSEF\AppBundle\Manager\CommentManager
+
+services:
+    osef_app.article.manager:
+        class:     %osef_app.article.manager.class%
+        arguments: [@doctrine.orm.default_entity_manager, %osef_app.article.entity.class%]
+    osef_app.comment.manager:
+            class:     %osef_app.comment.manager.class%
+            arguments: [@doctrine.orm.default_entity_manager, %osef_app.comment.entity.class%]
+#    osef_app.article.listener:
+#        class: OSEF\AppBundle\Listener\ArticleListener
+#        tags:
+#            - { name: doctrine.event_listener, event: prePersist }
+#            - { name: doctrine.event_listener, event: preUpdate }
+#    osef_app.example:
+#        class: OSEF\AppBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
